@@ -1,11 +1,11 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
 -- Physical ERD
 
 CREATE TABLE "Employees" (
     "emp_no" INT   NOT NULL,
-    "emp_title_id" INT   NOT NULL,
+    "emp_title_id" VARCHAR   NOT NULL,
 	"birth_data" DATE  NOT Null,
     "first_name" VARCHAR   NOT NULL,
     "last_name" VARCHAR   NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE "Dept_emp" (
 );
 
 CREATE TABLE "Title" (
-    "title_id" INT   NOT NULL,
+    "title_id" VARCHAR   NOT NULL,
     "title" VARCHAR   NOT NULL,
     CONSTRAINT "pk_Title" PRIMARY KEY (
         "title_id"
