@@ -51,12 +51,21 @@ on d.dept_no = de.dept_no;
 
 --Homework task 5
 --(first_name, last_name, sex for "Hercules", "B%")
--- Having trouble with this one
 
-select e.first_name, e.last_name
+select e.first_name, e.last_name, sex
 from "Employees" as e
-where e.last_name like 'B%'; 
+where e.last_name like 'B%' AND e.first_name = 'Hercules'
 
-select e.first_name
-from "Employees" as e
-where e.first_name IN ('Hercules');
+--Homework task 6
+--(employees in Sales, emp_no, last_name, first_name, dept_name)
+
+select e.emp_no, e.last_name, e.first_name, d.dept_name 
+from "Departments" as d, "Employees" as e
+where d.dept_name = 'Sales';
+
+--Homework task 7
+--(Employees in Sales and Development, emp_no, last_name, first_name, dept_name)
+
+select e.emp_no, e.last_name, e.first_name, d.dept_name 
+from "Departments" as d, "Employees" as e
+where d.dept_name = 'Sales' OR d.dept_name = 'Development';
