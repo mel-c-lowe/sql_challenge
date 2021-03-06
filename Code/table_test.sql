@@ -69,3 +69,11 @@ where d.dept_name = 'Sales';
 select e.emp_no, e.last_name, e.first_name, d.dept_name 
 from "Departments" as d, "Employees" as e
 where d.dept_name = 'Sales' OR d.dept_name = 'Development';
+
+--Homework task 8
+--(Descending order of count of unique last names)
+
+select e.last_name, count(last_name) as name_count
+from "Employees" as e
+group by e.last_name
+order by name_count desc;
